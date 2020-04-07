@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <h1>Cloud Cafe</h1>
+
+    <div class="content">
+      <form id="add-cafe-form">
+        <input type="text" name="name" placeholder="Cafe Name" />
+        <input type="text" name="city" placeholder="Cafe City" />
+        <button>Add Cafe</button>
+      </form>
+      <ul id="cafe-list"></ul>
+    </div>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBvEGosMqVj_VKWyv8RJ7fPzJ5CStBJqPg",
+        authDomain: "mafia-firestore.firebaseapp.com",
+        databaseURL: "https://mafia-firestore.firebaseio.com",
+        projectId: "mafia-firestore",
+        storageBucket: "mafia-firestore.appspot.com",
+        messagingSenderId: "368373972039",
+        appId: "1:368373972039:web:d744d321a0325d14118562",
+        measurementId: "G-SLWEMNRVXZ",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+      db.settings({ timestampsInSnapshots: true });
+      firebase.analytics();
+    </script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
